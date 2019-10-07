@@ -4,9 +4,6 @@ const router = express.Router()
 const movies = require('../json/movies.json')
 const validateMovieObj = require('../validations/movieValidator')
 
-const movieSetup = require('../models/movie')
-const movie = movieSetup(sequelize, Sequelize)
-
 const getMovieById = (req, res) => {
   const movie = movies.find( m => {
     return (
